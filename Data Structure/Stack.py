@@ -6,7 +6,6 @@ class Stack:
         self.size = size
         self.arr = [0]*size
         self.t = -1
-        
     def isFull(self):
         if self.t == size - 1: return True
         return False
@@ -15,10 +14,9 @@ class Stack:
     def pop(self):
         if self.isEmpty():
             return "아무것도 없습니다."
-        else:
-            p = self.arr[self.t]
-            self.t -= 1
-            return p
+        p = self.arr[self.t]
+        self.t -= 1
+        return p
     def push(self, a):
         if not self.isFull():
             self.t += 1
