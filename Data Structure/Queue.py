@@ -9,7 +9,7 @@ class Queue:
         self.r = -1
         self.size = size
     def isFull(self):
-        if self.r == size - 1: return True
+        if self.r == self.size - 1: return True
         return False
     def isEmpty(self):
         return self.f == self.r
