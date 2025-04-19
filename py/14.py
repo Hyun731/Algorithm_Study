@@ -1,3 +1,5 @@
+import sys
+sys.setrecursionlimit(10**9)
 def f(n):
     if room[n] != 10**5:
         return room[n]
@@ -11,7 +13,7 @@ def f(n):
     return room[n]
 
 n = int(input())
-room = [10**5] * 10**6 + 1
+room = [10**5] * (10**6 + 1)
 room[1] = 0
 room[2] = 1
 room[3] = 1
