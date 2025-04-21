@@ -45,6 +45,16 @@ class Sort: #리턴값 없음
                 if a[min] > a[j]:
                     min = j
             a[i], a[min] = a[min], a[i]
+    def bubble_sort(self,a):
+        n = len(a)
+        while True:
+            changed = False
+            for i in range(n-1):
+                if a[i] > a[i+1]:
+                    a[i],a[i+1] = a[i+1],a[i]
+                    changed = True
+            if not changed:
+                return
 
 s = Sort()
 a = [5,2,1,4,3,6,8,7,9,10]
@@ -55,4 +65,7 @@ s.ins_sort(a)
 print(a)
 a = [5,2,1,4,3,6,8,7,9,10]
 s.sel_sort(a)
+print(a)
+a = [5,2,1,4,3,6,8,7,9,10]
+s.bubble_sort(a)
 print(a)
