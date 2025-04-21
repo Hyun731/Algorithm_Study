@@ -7,7 +7,7 @@ class Stack:
         self.arr = [0]*size
         self.t = -1
     def isFull(self):
-        if self.t == size - 1: return True
+        if self.t == self.size - 1: return True
         return False
     def isEmpty(self):
         return self.t == -1

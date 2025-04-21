@@ -1,4 +1,4 @@
-class Sort:
+class Sort: #리턴값 없음
     def __init__(self):
         pass
     def merge_sort(self,a):
