@@ -40,11 +40,11 @@ class Sort: #리턴값 없음
             a[j + 1] = key
     def sel_sort(self,a):
         for i in range(len(a) - 1):
-            min = i
+            min_idx = i
             for j in range(i + 1,len(a)):
-                if a[min] > a[j]:
-                    min = j
-            a[i], a[min] = a[min], a[i]
+                if a[min_idx] > a[j]:
+                    min_idx = j
+            a[i], a[min_idx] = a[min_idx], a[i]
     def bubble_sort(self,a):
         n = len(a)
         while True:
