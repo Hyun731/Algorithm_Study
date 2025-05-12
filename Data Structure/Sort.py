@@ -71,6 +71,7 @@ class Sort: #리턴값 없음
         
         self.quick_sort_sub(a,start,i - 1)
         self.quick_sort_sub(a,i+1,end)
+        
     def quick_sort(self,a): #퀵 정렬 쓰고 싶으면 이걸로 호출(위에거 아님 ㄴㄴ)
         self.quick_sort_sub(a, 0, len(a) - 1)
 s = Sort()
