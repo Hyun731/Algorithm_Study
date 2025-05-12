@@ -55,7 +55,24 @@ class Sort: #리턴값 없음
                     changed = True
             if not changed:
                 return
+    def quick_sort_sub(self,a,start,end):
+        if end - start <= 0:
+            return a
 
+        pivot = a[end]
+        i = start
+
+        for j in range(start,end):
+            if a[j] <= pivot:
+                a[j],a[i] = a[i],a[j]
+                i += 1
+
+        a[i],a[end] = a[end],a[i]
+        
+        self.quick_sort_sub(a,start,i - 1)
+        self.quick_sort_sub(a,i+1,end)
+    def quick_sort(self,a): #퀵 정렬 쓰고 싶으면 이걸로 호출(위에거 아님 ㄴㄴ)
+        self.quick_sort_sub(a, 0, len(a) - 1)
 s = Sort()
 a = [5,2,1,4,3,6,8,7,9,10]
 s.merge_sort(a)
