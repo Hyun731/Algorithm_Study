@@ -13,7 +13,7 @@ graph = {
     10: [6]
 }
 
-#DFS (스택으로도 구현가능함. 현재는 재귀)
+#DFS 재귀
 visited = { i : False for i in range(1,11)}
 sequence = []
 
@@ -25,6 +25,23 @@ def f(x):
             f(node)
 
 f(1)
+print(sequence)
+
+#DFS 스택
+visited = {i: False for i in range(1, 11)}
+sequence = []
+
+stack = [1]
+
+while stack:
+    node = stack.pop() 
+    if not visited[node]: 
+        visited[node] = True
+        sequence.append(node) 
+        for n in reversed(graph[node]): 
+            if not visited[n]:
+                stack.append(n) 
+            
 print(sequence)
 
 #BFS
