@@ -1,9 +1,12 @@
 import sys
 import heapq
 input = sys.stdin.readline
+
 v,e = map(int,input().split())
+
 graph = { i : [] for i in range(1,v+1)}
 min_weight = [float('inf') for _ in range(v+1)]
+
 k = int(input())
 min_weight[k] = 0
 q = [(0,k)]
