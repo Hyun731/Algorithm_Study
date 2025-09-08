@@ -1,0 +1,55 @@
+# ========================
+# C / C++ 빌드 파일
+# ========================
+*.o
+*.obj
+*.so
+*.exe
+*.out
+*.a
+*.lib
+*.dll
+
+# 디버그 파일
+*.log
+*.dSYM/
+*.pdb
+
+# Makefile, cmake 빌드 폴더
+/build/
+/bin/
+/Debug/
+/Release/
+/CMakeFiles/
+/CMakeCache.txt
+cmake_install.cmake
+*.cmake
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+*.pyc
+
+# 가상환경
+venv/
+.env/
+env/
+.envrc
+
+# ========================
+# 공통
+# ========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+# JetBrains IDE
+.idea/
