@@ -9,6 +9,7 @@
 *.a
 *.lib
 *.dll
+exec
 
 # 디버그 파일
 *.log
@@ -53,3 +54,7 @@ Thumbs.db
 *.swo
 # JetBrains IDE
 .idea/
+
+*
+!*.*
+!*/
